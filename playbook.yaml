@@ -1,0 +1,10 @@
+- name: Hello World Sample
+  hosts: all
+  vars_prompt:
+  - name: description
+    prompt: describe the issue
+    private: false
+  tasks:
+    - name: message
+      debug:
+        msg: "{{description}}"
